@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.TakeQuizFragment">
+
+
+    <TextView
+        android:id="@+id/quiz_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="@dimen/_16ssp"
+        android:layout_marginEnd="32dp"
+        android:text="تحميل الاسئله"
+        android:textAlignment="center"
+        android:textSize="@dimen/_36ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quiz_question_number_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginRight="@dimen/_100sdp"
+        android:text="السؤال"
+        app:layout_constraintEnd_toEndOf="@+id/quiz_title"
+        app:layout_constraintStart_toStartOf="@+id/quiz_title"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_title" />
+
+    <TextView
+        android:id="@+id/quiz_question_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="@dimen/_36ssp"
+        app:layout_constraintEnd_toEndOf="@+id/quiz_question_number_title"
+        app:layout_constraintStart_toStartOf="@+id/quiz_question_number_title"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_question_number_title" />
+
+    <ProgressBar
+        android:id="@+id/quiz_question_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="@dimen/_72sdp"
+        android:layout_height="@dimen/_72sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_100sdp"
+        android:progress="100"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/quiz_question_number"
+        app:layout_constraintEnd_toEndOf="@+id/quiz_title"
+        app:layout_constraintStart_toStartOf="@+id/quiz_title"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_title" />
+
+    <TextView
+        android:id="@+id/quiz_question_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textSize="@dimen/_32ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/quiz_question_progress"
+        app:layout_constraintEnd_toEndOf="@+id/quiz_question_progress"
+        app:layout_constraintStart_toStartOf="@+id/quiz_question_progress"
+        app:layout_constraintTop_toTopOf="@+id/quiz_question_progress" />
+
+    <TextView
+        android:id="@+id/quiz_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:text="تجميع المقرر"
+        android:textAlignment="center"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_question_number" />
+
+    <Button
+        android:id="@+id/quiz_option_one"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="Option Button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_question"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/quiz_option_two"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="Option Button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_option_one"
+        tools:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/quiz_option_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="Option Button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_option_two"
+        tools:visibility="invisible" />
+    <Button
+        android:id="@+id/quiz_option_four"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:padding="@dimen/_12sdp"
+        android:text="Option Button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_option_three"
+        tools:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/quiz_question_feedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:text="التحقق من الاجابه"
+        android:textAlignment="center"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_option_four"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/quiz_next_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="السؤال التالى"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.CreateQuizFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/QuizName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="Quiz name"
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/questionsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="QuestionNumber"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/QuizName" />
+
+        <EditText
+            android:layout_marginTop="@dimen/_16sdp"
+            android:id="@+id/edtQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:inputType="textPersonName"
+            android:hint="enter the question here"
+            android:textAlignment="center"
+            android:maxLines="3"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionsNumber" />
+        <EditText
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/edtCorrectAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_16ssp"
+            android:inputType="textPersonName"
+            android:hint="enter the Correct Answer here"
+            android:textAlignment="center"
+            android:maxLines="3"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtQuestion" />
+
+        <EditText
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/edtWrongAnswer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_16ssp"
+            android:inputType="textPersonName"
+            android:hint="enter the first wrong Answer here"
+            android:textAlignment="center"
+            android:maxLines="3"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtCorrectAnswer" />
+
+        <EditText
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/edtWrongAnswer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_16ssp"
+            android:inputType="textPersonName"
+            android:hint="enter the second wrong Answer here"
+            android:textAlignment="center"
+            android:maxLines="3"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtWrongAnswer1" />
+
+        <EditText
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/edtWrongAnswer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_16ssp"
+            android:inputType="textPersonName"
+            android:hint="enter the third wrong Answer here"
+            android:textAlignment="center"
+            android:maxLines="3"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtWrongAnswer2" />
+        <EditText
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/edtWrongAnswer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="@dimen/_16ssp"
+            android:inputType="textPersonName"
+            android:hint="enter the forth wrong Answer here"
+            android:textAlignment="center"
+            android:maxLines="3"
+            android:padding="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtWrongAnswer3" />
+        <LinearLayout
+            android:id="@+id/timeSpinner"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtWrongAnswer4"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16ssp"
+                android:layout_height="wrap_content"
+                android:text="Time in seconds"
+                />
+
+            <Spinner
+                android:scrollbarSize="@dimen/_16ssp"
+                android:id="@+id/timerSpinner"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+        <Button
+            android:layout_marginTop="@dimen/_16ssp"
+            android:id="@+id/next_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NextQuestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/timeSpinner"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

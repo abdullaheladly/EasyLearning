@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/completeProfileFragment">
+    <fragment
+        android:id="@+id/completeProfileFragment"
+        android:name="com.abdullah996.easylearning.ui.fragments.CompleteProfileFragment"
+        android:label="fragment_complete_profile"
+        tools:layout="@layout/fragment_complete_profile" >
+        <action
+            android:id="@+id/action_completeProfileFragment_to_timeLineFragment"
+            app:destination="@id/timeLineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeLineFragment"
+        android:name="com.abdullah996.easylearning.ui.fragments.TimeLineFragment"
+        android:label="fragment_time_line"
+        tools:layout="@layout/fragment_time_line" >
+        <action
+            android:id="@+id/action_timeLineFragment_to_createQuizFragment"
+            app:destination="@id/createQuizFragment" />
+        <action
+            android:id="@+id/action_timeLineFragment_to_createPostsFragment"
+            app:destination="@id/createPostsFragment" />
+        <action
+            android:id="@+id/action_timeLineFragment_to_addPdfFragment"
+            app:destination="@id/addPdfFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createQuizFragment"
+        android:name="com.abdullah996.easylearning.ui.fragments.CreateQuizFragment"
+        android:label="fragment_create_quiz"
+        tools:layout="@layout/fragment_create_quiz" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="questionsNumber"
+            app:argType="integer" />
+        <argument
+            android:name="possibleAnswers"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_createQuizFragment_to_takeQuizFragment"
+            app:destination="@id/takeQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeQuizFragment"
+        android:name="com.abdullah996.easylearning.ui.fragments.TakeQuizFragment"
+        android:label="fragment_take_quiz"
+        tools:layout="@layout/fragment_take_quiz" >
+        <argument
+            android:name="quiz_id"
+            app:argType="string" />
+        <argument
+            android:name="subject"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/createPostsFragment"
+        android:name="com.abdullah996.easylearning.ui.fragments.CreatePostsFragment"
+        android:label="fragment_create_posts"
+        tools:layout="@layout/fragment_create_posts" >
+        <action
+            android:id="@+id/action_createPostsFragment_to_timeLineFragment"
+            app:destination="@id/timeLineFragment" />
+
+    </dialog>
+    <dialog
+        android:id="@+id/addPdfFragment"
+        android:name="com.abdullah996.easylearning.ui.fragments.AddPdfFragment"
+        android:label="fragment_add_pdf"
+        tools:layout="@layout/fragment_add_pdf" >
+        <action
+            android:id="@+id/action_addPdfFragment_to_timeLineFragment"
+            app:destination="@id/timeLineFragment" />
+    </dialog>
+</navigation>
